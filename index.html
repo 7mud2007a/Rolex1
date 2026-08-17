@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#050806">
+<meta name="description" content="ROLEX — a premium interactive watch collection experience.">
+<title>ROLEX — Horological Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#040705;--bg2:#08100b;--glass:rgba(255,255,255,.075);--glass2:rgba(255,255,255,.11);
+  --line:rgba(255,255,255,.13);--text:#f5f5ef;--muted:#a6afa8;--green:#0d6b48;
+  --green2:#1fa56d;--gold:#c7a85b;--shadow:0 28px 90px rgba(0,0,0,.42);
+  --ease:cubic-bezier(.2,.75,.2,1);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:
+radial-gradient(circle at 50% -10%,rgba(24,119,78,.25),transparent 35%),
+radial-gradient(circle at 100% 50%,rgba(199,168,91,.07),transparent 30%),
+var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");z-index:1000}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}
+.nav{position:fixed;z-index:50;top:18px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 28px));height:68px;padding:0 12px 0 22px;border:1px solid var(--line);border-radius:24px;background:rgba(10,15,12,.62);backdrop-filter:blur(24px) saturate(150%);box-shadow:0 18px 55px rgba(0,0,0,.28);display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:"Playfair Display",serif;letter-spacing:.24em;font-weight:700;font-size:19px}.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:7px}.navlinks a,.navcta{padding:12px 15px;border-radius:15px;color:#c9d0cb;font-size:13px;transition:.25s var(--ease)}
+.navlinks a:hover{background:var(--glass2);color:white}.navcta{border:1px solid rgba(199,168,91,.35);background:rgba(199,168,91,.08);cursor:pointer}
+.menu{display:none;border:0;background:var(--glass);width:45px;height:45px;border-radius:14px}
+.hero{min-height:100svh;position:relative;display:grid;place-items:center;overflow:hidden;padding:120px 20px 70px}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:90px 90px;mask-image:linear-gradient(to bottom,black,transparent 90%)}
+.hero-copy{position:absolute;z-index:3;left:max(24px,calc(50% - 560px));top:26%;max-width:360px;pointer-events:none}
+.eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+h1{font-family:"Playfair Display",serif;font-size:clamp(54px,8vw,112px);line-height:.86;margin:0 0 22px;letter-spacing:-.055em}
+.hero-copy p{color:var(--muted);line-height:1.7;font-size:14px;max-width:310px}
+.hero-stage{width:min(700px,90vw);aspect-ratio:1;position:relative;display:grid;place-items:center;perspective:1200px;z-index:2}
+.glow{position:absolute;width:58%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(30,155,102,.24),transparent 67%);filter:blur(20px)}
+.watch-wrap{width:52%;aspect-ratio:1;position:relative;transition:transform .12s linear;transform-style:preserve-3d;filter:drop-shadow(0 55px 55px rgba(0,0,0,.65))}
+.watch{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 32% 25%,#5f6c66 0 2%,#18201c 7%,#070908 58%,#202b25 76%,#080b09 100%);border:10px solid #a9aa9f;box-shadow:inset 0 0 0 3px #292d29, inset 0 0 20px #000,0 0 0 4px #54574f,0 0 55px rgba(0,0,0,.7);transform:translateZ(25px)}
+.watch:after{content:"";position:absolute;inset:6%;border-radius:50%;border:1px solid rgba(255,255,255,.17)}
+.strap{position:absolute;z-index:-2;left:30%;right:30%;top:-30%;height:160%;border-radius:40px;background:linear-gradient(90deg,#151816,#74766d 18%,#252825 34%,#777970 50%,#20231f 70%,#111310);box-shadow:inset 0 0 15px #000;transform:translateZ(-25px)}
+.crown{position:absolute;right:-12px;top:45%;width:25px;height:48px;border-radius:6px;background:linear-gradient(#9e9f96,#292b27);box-shadow:inset 0 0 7px #000}
+.indices{position:absolute;inset:9%;border-radius:50%}
+.indices i{position:absolute;left:50%;top:0;width:3px;height:12px;background:#d6d1bb;transform-origin:50% 100%;border-radius:3px;transform:rotate(calc(var(--i)*30deg));}
+.indices i:after{content:"";display:block;height:100%;transform:rotate(calc(var(--i)*-30deg))}
+.dial-logo{position:absolute;inset:31% 0 auto;text-align:center;font-family:"Playfair Display";font-size:13px;letter-spacing:.12em;color:#e6e1cf}.sub{font-family:"DM Sans";font-size:7px;letter-spacing:.18em;color:#a6aaa1;margin-top:5px}
+.hands{position:absolute;inset:0}.hand{position:absolute;left:50%;bottom:50%;width:3px;height:28%;background:#d8d5c5;transform-origin:50% 100%;border-radius:4px;box-shadow:0 0 5px rgba(255,255,255,.3)}.hand.hour{transform:translateX(-50%) rotate(38deg);height:22%}.hand.min{transform:translateX(-50%) rotate(145deg);height:31%}.hand.sec{width:1px;background:#c7a85b;transform:translateX(-50%) rotate(210deg);height:35%}.pin{position:absolute;left:50%;top:50%;width:9px;height:9px;transform:translate(-50%,-50%);border-radius:50%;background:#c7a85b;border:2px solid #111}
+.hero-hint{position:absolute;bottom:42px;z-index:4;display:flex;align-items:center;gap:10px;color:#8f9992;font-size:11px;letter-spacing:.12em;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:#35c88a;box-shadow:0 0 14px #35c88a;animation:pulse 1.8s infinite}
+@keyframes pulse{50%{opacity:.3;transform:scale(.7)}}
+.hero-side{position:absolute;right:max(24px,calc(50% - 560px));bottom:15%;z-index:4;text-align:right}.price{font-family:"Playfair Display";font-size:25px}.side-label{font-size:10px;color:#7f8982;letter-spacing:.18em;text-transform:uppercase}
+.section{width:min(1120px,calc(100% - 36px));margin:auto;padding:110px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}.section-title{font-family:"Playfair Display";font-size:clamp(38px,5vw,65px);line-height:1;margin:0}.section-desc{max-width:390px;color:var(--muted);font-size:13px;line-height:1.8}
+.collection{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{position:relative;min-height:470px;border:1px solid var(--line);border-radius:28px;padding:18px;background:linear-gradient(145deg,rgba(255,255,255,.095),rgba(255,255,255,.025));backdrop-filter:blur(20px);overflow:hidden;transition:transform .35s var(--ease),border-color .35s,box-shadow .35s;cursor:pointer}
+.card:hover{transform:translateY(-7px);border-color:rgba(199,168,91,.35);box-shadow:var(--shadow)}.card:active,.glassbtn:active{transform:scale(.975)}
+.card-top{display:flex;justify-content:space-between;align-items:center;font-size:10px;color:#8f9992;letter-spacing:.13em;text-transform:uppercase}.fav{width:35px;height:35px;border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:50%;cursor:pointer}
+.card-watch{height:300px;display:grid;place-items:center;position:relative}.mini-watch{width:54%;aspect-ratio:1;position:relative;transform:rotate(-7deg);transition:.4s var(--ease);filter:drop-shadow(0 25px 25px rgba(0,0,0,.55))}.card:hover .mini-watch{transform:rotate(-2deg) scale(1.05)}.mini-watch .watch{border-width:7px}.mini-watch .strap{border-radius:25px}
+.card-info{border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;gap:10px}.model{font-family:"Playfair Display";font-size:21px}.spec{font-size:10px;color:#858f89;margin-top:6px}.card-price{text-align:right;color:#d9d4c3;font-size:14px}.card-price small{display:block;color:#7e8881;font-size:9px;margin-top:4px}
+.bento{display:grid;grid-template-columns:1.3fr .7fr;gap:16px}.panel{border:1px solid var(--line);border-radius:30px;background:var(--glass);backdrop-filter:blur(22px);padding:30px;overflow:hidden;position:relative}.big-panel{min-height:430px}.panel h3{font-family:"Playfair Display";font-size:35px;margin:0 0 13px}.panel p{color:var(--muted);line-height:1.75;font-size:13px;max-width:520px}.orbit{position:absolute;right:-80px;bottom:-100px;width:360px;height:360px;border:1px solid rgba(199,168,91,.22);border-radius:50%}.orbit:after{content:"";position:absolute;inset:45px;border:1px solid rgba(255,255,255,.08);border-radius:50%}.metric{font-size:42px;font-family:"Playfair Display";margin:38px 0 4px}.micro{font-size:10px;color:#7f8982;letter-spacing:.12em;text-transform:uppercase}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}.process .panel{min-height:220px}.num{font-size:11px;color:var(--gold);letter-spacing:.18em}.process h4{font-family:"Playfair Display";font-size:24px;margin:40px 0 8px}
+.cta{border:1px solid rgba(199,168,91,.27);background:linear-gradient(130deg,rgba(16,101,68,.28),rgba(199,168,91,.07));border-radius:32px;padding:55px;display:flex;justify-content:space-between;align-items:center;gap:30px;box-shadow:var(--shadow)}.cta h2{font-family:"Playfair Display";font-size:clamp(35px,5vw,60px);margin:0 0 10px}.cta p{color:var(--muted);max-width:500px;line-height:1.7;font-size:13px}.glassbtn{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.1);padding:15px 20px;border-radius:16px;cursor:pointer;transition:.25s var(--ease);white-space:nowrap}.glassbtn:hover{background:rgba(255,255,255,.16);border-color:rgba(199,168,91,.45);transform:translateY(-2px)}
+footer{border-top:1px solid var(--line);padding:35px max(20px,calc((100% - 1120px)/2));display:flex;justify-content:space-between;gap:20px;color:#77817a;font-size:11px}.gold{color:var(--gold)}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s var(--ease),transform .8s var(--ease)}.reveal.show{opacity:1;transform:none}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.68);backdrop-filter:blur(18px);z-index:200;display:none;place-items:center;padding:20px}.modal.open{display:grid}.modal-box{width:min(720px,100%);border:1px solid var(--line);border-radius:30px;background:rgba(12,17,14,.86);padding:30px;box-shadow:var(--shadow);transform:scale(.96);animation:pop .35s var(--ease) forwards}@keyframes pop{to{transform:scale(1)}}.modal-close{float:right;border:1px solid var(--line);background:var(--glass);border-radius:50%;width:38px;height:38px;cursor:pointer}.modal-watch{height:280px;display:grid;place-items:center}.modal-watch .mini-watch{width:190px}.modal-box h2{font-family:"Playfair Display";font-size:38px;margin:0}.modal-box p{color:var(--muted);line-height:1.7;font-size:13px}.modal-price{font-size:25px;color:#ded8c4;margin:18px 0}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{font-size:10px;color:#aeb6b0;padding:8px 11px;border:1px solid var(--line);border-radius:99px;background:var(--glass)}
+@media(max-width:850px){.navlinks,.navcta{display:none}.menu{display:block}.hero-copy{position:relative;left:auto;top:auto;text-align:center;max-width:500px;align-self:start}.hero{display:flex;flex-direction:column;padding-top:130px}.hero-copy p{margin:auto}.hero-stage{margin-top:-40px;width:min(620px,100vw)}.hero-side{right:20px;bottom:20%;}.collection{grid-template-columns:repeat(2,1fr)}.bento{grid-template-columns:1fr}.cta{flex-direction:column;align-items:flex-start}}
+@media(max-width:560px){.nav{top:10px;height:60px;border-radius:20px}.logo{font-size:16px}.hero-copy{margin-top:5px}.hero-copy h1{font-size:58px}.hero-stage{margin-top:-15px}.hero-side{display:none}.section{padding:75px 0}.section-head{display:block}.section-desc{margin-top:16px}.collection{grid-template-columns:1fr}.card{min-height:430px}.card-watch{height:270px}.process{grid-template-columns:1fr}.cta{padding:32px 25px}footer{display:block}.footer-right{margin-top:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}.watch-wrap{transition:none}.card{transition:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="logo" href="#top">ROLEX<span>®</span></a>
+  <div class="navlinks">
+    <a href="#collection">Collection</a><a href="#experience">Experience</a><a href="#craft">Craft</a><a href="#contact">Contact</a>
+  </div>
+  <a class="navcta" href="tel:0966186436">096 618 6436</a>
+  <button class="menu" aria-label="Open menu" onclick="document.querySelector('.navlinks').classList.toggle('mobile-open')">☰</button>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-copy reveal show">
+    <div class="eyebrow">The Art of Time</div>
+    <h1>TIME,<br><span class="gold">REFINED.</span></h1>
+    <p>Explore a glass-inspired horological experience where every movement reveals another layer of the watch.</p>
+  </div>
+
+  <div class="hero-stage" id="stage" aria-label="Interactive luxury watch">
+    <div class="glow"></div>
+    <div class="watch-wrap" id="heroWatch">
+      <div class="strap"></div>
+      <div class="watch">
+        <div class="indices">
+          <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i>
+        </div>
+        <div class="dial-logo">ROLEX<div class="sub">OYSTER PERPETUAL</div></div>
+        <div class="hands"><div class="hand hour"></div><div class="hand min"></div><div class="hand sec"></div><div class="pin"></div></div>
+        <div class="crown"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-side"><div class="side-label">From</div><div class="price">$10,000</div></div>
+  <div class="hero-hint"><span class="dot"></span> Move your pointer / finger to explore</div>
+</section>
+
+<section class="section reveal" id="collection">
+  <div class="section-head">
+    <div><div class="eyebrow">Curated references</div><h2 class="section-title">The Collection</h2></div>
+    <p class="section-desc">A selection of iconic silhouettes presented as an interactive digital showroom. Tap any piece for a closer look.</p>
+  </div>
+  <div class="collection" id="products"></div>
+</section>
+
+<section class="section reveal" id="experience">
+  <div class="section-head"><div><div class="eyebrow">Immersive detail</div><h2 class="section-title">Inside the experience.</h2></div></div>
+  <div class="bento">
+    <article class="panel big-panel"><div class="eyebrow">01 / Perspective</div><h3>Turn the interface into a showcase.</h3><p>Depth, reflections and controlled motion make the product feel physical without overwhelming the page. The glass layers stay quiet; the watch stays the hero.</p><div class="metric">360°</div><div class="micro">Interactive perspective</div><div class="orbit"></div></article>
+    <article class="panel"><div class="eyebrow">02 / Presence</div><h3>Made to feel rare.</h3><p>Dark OLED-inspired surfaces, restrained green and champagne-gold accents create a premium environment.</p><div class="metric">12</div><div class="micro">Featured references</div></article>
+  </div>
+  <div class="process">
+    <article class="panel"><div class="num">A / 01</div><h4>Choose</h4><p>Browse the collection with tactile glass cards and quick details.</p></article>
+    <article class="panel"><div class="num">A / 02</div><h4>Inspect</h4><p>Open a reference and reveal its character, materials and price.</p></article>
+    <article class="panel"><div class="num">A / 03</div><h4>Connect</h4><p>Call the store or visit us in Homs, Al-Dablan Street.</p></article>
+  </div>
+</section>
+
+<section class="section reveal" id="craft">
+  <div class="cta">
+    <div><div class="eyebrow">The showroom</div><h2>See it in person.</h2><p>Homs · Al-Dablan Street. For availability, details and appointments, contact the showroom directly.</p></div>
+    <a class="glassbtn" href="tel:0966186436">Call 096 618 6436 →</a>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div>© 2026 <span class="gold">ROLEX</span> Experience</div>
+  <div class="footer-right">Homs · Al-Dablan Street · <a class="gold" href="https://instagram.com/7mud_963" target="_blank" rel="noopener">@7mud_963</a></div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
+    <div class="modal-watch" id="modalWatch"></div>
+    <div class="eyebrow" id="modalRef"></div><h2 id="modalTitle"></h2><div class="modal-price" id="modalPrice"></div>
+    <p id="modalDesc"></p><div class="chips" id="modalChips"></div>
+  </div>
+</div>
+
+<script>
+const products=[
+["Submariner","126610LN","$10,000","Oystersteel · Black","A deep black diver silhouette with a clean, high-contrast dial and a purpose-built profile."],
+["Datejust","126334","$11,500","Steel & white gold · Blue","A refined everyday icon balancing polished surfaces with a crisp sunray dial."],
+["GMT-Master II","126710GRNR","$13,800","Oystersteel · Black & grey","Built around the idea of travel, with a distinctive 24-hour bezel and dual-time character."],
+["Daytona","126500LN","$16,500","Steel · Black","A motorsport-inspired chronograph presence with three-dimensional sub-dials."],
+["Day-Date","228238","$22,000","Yellow gold · Champagne","A statement piece with warm metal, sculpted indices and unmistakable wrist presence."],
+["Explorer","124270","$10,800","Oystersteel · Black","A compact, legible tool-watch expression designed around clarity and adventure."],
+["Yacht-Master","126622","$14,200","Oystersteel · Slate","Sport-luxury proportions with a technical bezel and a modern dark dial."],
+["Sky-Dweller","336934","$18,500","White gold & steel · Blue","A sophisticated travel watch presented with layered information and a bold dial."],
+["Oyster Perpetual","124300","$10,200","Oystersteel · Green","A pure, minimal expression of the Oyster case and perpetual movement idea."],
+["Sea-Dweller","126600","$14,900","Oystersteel · Black","A commanding diver profile with a substantial case and deep monochrome dial."],
+["GMT-Master II","126715CHNR","$36,000","Everose gold · Brown","Warm Everose tones meet a rich brown palette for a collector-focused travel aesthetic."],
+["Datejust 41","126333","$13,000","Yellow Rolesor · Black","A balanced 41 mm profile combining polished gold warmth with a dark, elegant face."]
+];
+function watchMarkup(seed=0){
+  const border=["#aaa99e","#b9b4a0","#8b928c","#bca46c"][seed%4];
+  const dial=["#080a09","#111a16","#20251f","#171717"][seed%4];
+  return `<div class="mini-watch" style="--seed:${seed}">
+    <div class="strap" style="background:linear-gradient(90deg,#101310,${border}55,#252a26,${border}66,#101310)"></div>
+    <div class="watch" style="border-color:${border};background:radial-gradient(circle at 32% 25%,#6c746d 0 2%,${dial} 9%,#050706 62%,#202721 78%,#070908 100%)">
+      <div class="indices">${Array.from({length:12},(_,i)=>`<i style="--i:${i}"></i>`).join("")}</div>
+      <div class="dial-logo">ROLEX<div class="sub">OYSTER PERPETUAL</div></div>
+      <div class="hands"><div class="hand hour" style="transform:translateX(-50%) rotate(${25+seed*11}deg)"></div><div class="hand min" style="transform:translateX(-50%) rotate(${115+seed*13}deg)"></div><div class="hand sec" style="transform:translateX(-50%) rotate(${190+seed*17}deg)"></div><div class="pin"></div></div>
+      <div class="crown"></div>
+    </div>
+  </div>`;
+}
+const productEl=document.getElementById("products");
+products.forEach((p,i)=>{
+  const c=document.createElement("article");c.className="card reveal";c.tabIndex=0;
+  c.innerHTML=`<div class="card-top"><span>Reference ${p[1]}</span><button class="fav" aria-label="Favorite">♡</button></div><div class="card-watch">${watchMarkup(i)}</div><div class="card-info"><div><div class="model">${p[0]}</div><div class="spec">${p[3]}</div></div><div class="card-price">${p[2]}<small>VIEW DETAILS</small></div></div>`;
+  c.addEventListener("click",e=>{if(e.target.closest(".fav")){e.stopPropagation();e.target.closest(".fav").textContent=e.target.closest(".fav").textContent==="♡"?"♥":"♡";return}openModal(i)});
+  c.addEventListener("keydown",e=>{if(e.key==="Enter")openModal(i)});
+  productEl.appendChild(c);
+});
+function openModal(i){
+ const p=products[i];document.getElementById("modal").classList.add("open");
+ document.getElementById("modalWatch").innerHTML=watchMarkup(i);
+ document.getElementById("modalRef").textContent="REFERENCE "+p[1];
+ document.getElementById("modalTitle").textContent=p[0];
+ document.getElementById("modalPrice").textContent=p[2];
+ document.getElementById("modalDesc").textContent=p[4];
+ document.getElementById("modalChips").innerHTML=p[3].split(" · ").map(x=>`<span class="chip">${x}</span>`).join("")+`<span class="chip">Automatic movement</span><span class="chip">Sapphire crystal</span>`;
+}
+function closeModal(){document.getElementById("modal").classList.remove("open")}
+document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+
+const stage=document.getElementById("stage"),heroWatch=document.getElementById("heroWatch");
+function move(x,y){
+ const r=stage.getBoundingClientRect(),px=(x-r.left)/r.width-.5,py=(y-r.top)/r.height-.5;
+ heroWatch.style.transform=`translate3d(${px*34}px,${py*34}px,0) rotateX(${py*-12}deg) rotateY(${px*15}deg)`;
+}
+stage.addEventListener("pointermove",e=>move(e.clientX,e.clientY));
+stage.addEventListener("pointerleave",()=>heroWatch.style.transform="translate3d(0,0,0)");
+let touchStart=null;
+stage.addEventListener("touchmove",e=>{const t=e.touches[0];move(t.clientX,t.clientY)},{passive:true});
+stage.addEventListener("touchend",()=>heroWatch.style.transform="translate3d(0,0,0)");
+
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
