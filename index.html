@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#050806">
+<meta name="theme-color" content="#160507">
 <meta name="description" content="ROLEX — a premium interactive watch collection experience.">
 <title>ROLEX — Horological Experience</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,14 +11,14 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#040705;--bg2:#08100b;--glass:rgba(255,255,255,.075);--glass2:rgba(255,255,255,.11);
-  --line:rgba(255,255,255,.13);--text:#f5f5ef;--muted:#a6afa8;--green:#0d6b48;
-  --green2:#1fa56d;--gold:#c7a85b;--shadow:0 28px 90px rgba(0,0,0,.42);
+  --bg:#040705;--bg2:#100609;--glass:rgba(255,255,255,.075);--glass2:rgba(255,255,255,.11);
+  --line:rgba(255,255,255,.13);--text:#f5f5ef;--muted:#a6afa8;--red:#8b1020;
+  --red2:#e33b4b;--gold:#c7a85b;--shadow:0 28px 90px rgba(0,0,0,.42);
   --ease:cubic-bezier(.2,.75,.2,1);
 }
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:
-radial-gradient(circle at 50% -10%,rgba(24,119,78,.25),transparent 35%),
+radial-gradient(circle at 50% -10%,rgba(170,20,35,.25),transparent 35%),
 radial-gradient(circle at 100% 50%,rgba(199,168,91,.07),transparent 30%),
 var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;overflow-x:hidden}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");z-index:1000}
@@ -35,7 +35,7 @@ a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}
 h1{font-family:"Playfair Display",serif;font-size:clamp(54px,8vw,112px);line-height:.86;margin:0 0 22px;letter-spacing:-.055em}
 .hero-copy p{color:var(--muted);line-height:1.7;font-size:14px;max-width:310px}
 .hero-stage{width:min(700px,90vw);aspect-ratio:1;position:relative;display:grid;place-items:center;perspective:1200px;z-index:2}
-.glow{position:absolute;width:58%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(30,155,102,.24),transparent 67%);filter:blur(20px)}
+.glow{position:absolute;width:58%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(210,35,55,.24),transparent 67%);filter:blur(20px)}
 .watch-wrap{width:52%;aspect-ratio:1;position:relative;transition:transform .12s linear;transform-style:preserve-3d;filter:drop-shadow(0 55px 55px rgba(0,0,0,.65))}
 .watch{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 32% 25%,#5f6c66 0 2%,#18201c 7%,#070908 58%,#202b25 76%,#080b09 100%);border:10px solid #a9aa9f;box-shadow:inset 0 0 0 3px #292d29, inset 0 0 20px #000,0 0 0 4px #54574f,0 0 55px rgba(0,0,0,.7);transform:translateZ(25px)}
 .watch:after{content:"";position:absolute;inset:6%;border-radius:50%;border:1px solid rgba(255,255,255,.17)}
@@ -46,7 +46,7 @@ h1{font-family:"Playfair Display",serif;font-size:clamp(54px,8vw,112px);line-hei
 .indices i:after{content:"";display:block;height:100%;transform:rotate(calc(var(--i)*-30deg))}
 .dial-logo{position:absolute;inset:31% 0 auto;text-align:center;font-family:"Playfair Display";font-size:13px;letter-spacing:.12em;color:#e6e1cf}.sub{font-family:"DM Sans";font-size:7px;letter-spacing:.18em;color:#a6aaa1;margin-top:5px}
 .hands{position:absolute;inset:0}.hand{position:absolute;left:50%;bottom:50%;width:3px;height:28%;background:#d8d5c5;transform-origin:50% 100%;border-radius:4px;box-shadow:0 0 5px rgba(255,255,255,.3)}.hand.hour{transform:translateX(-50%) rotate(38deg);height:22%}.hand.min{transform:translateX(-50%) rotate(145deg);height:31%}.hand.sec{width:1px;background:#c7a85b;transform:translateX(-50%) rotate(210deg);height:35%}.pin{position:absolute;left:50%;top:50%;width:9px;height:9px;transform:translate(-50%,-50%);border-radius:50%;background:#c7a85b;border:2px solid #111}
-.hero-hint{position:absolute;bottom:42px;z-index:4;display:flex;align-items:center;gap:10px;color:#8f9992;font-size:11px;letter-spacing:.12em;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:#35c88a;box-shadow:0 0 14px #35c88a;animation:pulse 1.8s infinite}
+.hero-hint{position:absolute;bottom:42px;z-index:4;display:flex;align-items:center;gap:10px;color:#8f9992;font-size:11px;letter-spacing:.12em;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:#e33b4b;box-shadow:0 0 14px #e33b4b;animation:pulse 1.8s infinite}
 @keyframes pulse{50%{opacity:.3;transform:scale(.7)}}
 .hero-side{position:absolute;right:max(24px,calc(50% - 560px));bottom:15%;z-index:4;text-align:right}.price{font-family:"Playfair Display";font-size:25px}.side-label{font-size:10px;color:#7f8982;letter-spacing:.18em;text-transform:uppercase}
 .section{width:min(1120px,calc(100% - 36px));margin:auto;padding:110px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}.section-title{font-family:"Playfair Display";font-size:clamp(38px,5vw,65px);line-height:1;margin:0}.section-desc{max-width:390px;color:var(--muted);font-size:13px;line-height:1.8}
@@ -57,7 +57,7 @@ h1{font-family:"Playfair Display",serif;font-size:clamp(54px,8vw,112px);line-hei
 .card-info{border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;gap:10px}.model{font-family:"Playfair Display";font-size:21px}.spec{font-size:10px;color:#858f89;margin-top:6px}.card-price{text-align:right;color:#d9d4c3;font-size:14px}.card-price small{display:block;color:#7e8881;font-size:9px;margin-top:4px}
 .bento{display:grid;grid-template-columns:1.3fr .7fr;gap:16px}.panel{border:1px solid var(--line);border-radius:30px;background:var(--glass);backdrop-filter:blur(22px);padding:30px;overflow:hidden;position:relative}.big-panel{min-height:430px}.panel h3{font-family:"Playfair Display";font-size:35px;margin:0 0 13px}.panel p{color:var(--muted);line-height:1.75;font-size:13px;max-width:520px}.orbit{position:absolute;right:-80px;bottom:-100px;width:360px;height:360px;border:1px solid rgba(199,168,91,.22);border-radius:50%}.orbit:after{content:"";position:absolute;inset:45px;border:1px solid rgba(255,255,255,.08);border-radius:50%}.metric{font-size:42px;font-family:"Playfair Display";margin:38px 0 4px}.micro{font-size:10px;color:#7f8982;letter-spacing:.12em;text-transform:uppercase}
 .process{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}.process .panel{min-height:220px}.num{font-size:11px;color:var(--gold);letter-spacing:.18em}.process h4{font-family:"Playfair Display";font-size:24px;margin:40px 0 8px}
-.cta{border:1px solid rgba(199,168,91,.27);background:linear-gradient(130deg,rgba(16,101,68,.28),rgba(199,168,91,.07));border-radius:32px;padding:55px;display:flex;justify-content:space-between;align-items:center;gap:30px;box-shadow:var(--shadow)}.cta h2{font-family:"Playfair Display";font-size:clamp(35px,5vw,60px);margin:0 0 10px}.cta p{color:var(--muted);max-width:500px;line-height:1.7;font-size:13px}.glassbtn{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.1);padding:15px 20px;border-radius:16px;cursor:pointer;transition:.25s var(--ease);white-space:nowrap}.glassbtn:hover{background:rgba(255,255,255,.16);border-color:rgba(199,168,91,.45);transform:translateY(-2px)}
+.cta{border:1px solid rgba(199,168,91,.27);background:linear-gradient(130deg,rgba(120,12,28,.32),rgba(199,168,91,.07));border-radius:32px;padding:55px;display:flex;justify-content:space-between;align-items:center;gap:30px;box-shadow:var(--shadow)}.cta h2{font-family:"Playfair Display";font-size:clamp(35px,5vw,60px);margin:0 0 10px}.cta p{color:var(--muted);max-width:500px;line-height:1.7;font-size:13px}.glassbtn{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.1);padding:15px 20px;border-radius:16px;cursor:pointer;transition:.25s var(--ease);white-space:nowrap}.glassbtn:hover{background:rgba(255,255,255,.16);border-color:rgba(199,168,91,.45);transform:translateY(-2px)}
 footer{border-top:1px solid var(--line);padding:35px max(20px,calc((100% - 1120px)/2));display:flex;justify-content:space-between;gap:20px;color:#77817a;font-size:11px}.gold{color:var(--gold)}
 .reveal{opacity:0;transform:translateY(25px);transition:opacity .8s var(--ease),transform .8s var(--ease)}.reveal.show{opacity:1;transform:none}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.68);backdrop-filter:blur(18px);z-index:200;display:none;place-items:center;padding:20px}.modal.open{display:grid}.modal-box{width:min(720px,100%);border:1px solid var(--line);border-radius:30px;background:rgba(12,17,14,.86);padding:30px;box-shadow:var(--shadow);transform:scale(.96);animation:pop .35s var(--ease) forwards}@keyframes pop{to{transform:scale(1)}}.modal-close{float:right;border:1px solid var(--line);background:var(--glass);border-radius:50%;width:38px;height:38px;cursor:pointer}.modal-watch{height:280px;display:grid;place-items:center}.modal-watch .mini-watch{width:190px}.modal-box h2{font-family:"Playfair Display";font-size:38px;margin:0}.modal-box p{color:var(--muted);line-height:1.7;font-size:13px}.modal-price{font-size:25px;color:#ded8c4;margin:18px 0}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{font-size:10px;color:#aeb6b0;padding:8px 11px;border:1px solid var(--line);border-radius:99px;background:var(--glass)}
@@ -116,7 +116,7 @@ footer{border-top:1px solid var(--line);padding:35px max(20px,calc((100% - 1120p
   <div class="section-head"><div><div class="eyebrow">Immersive detail</div><h2 class="section-title">Inside the experience.</h2></div></div>
   <div class="bento">
     <article class="panel big-panel"><div class="eyebrow">01 / Perspective</div><h3>Turn the interface into a showcase.</h3><p>Depth, reflections and controlled motion make the product feel physical without overwhelming the page. The glass layers stay quiet; the watch stays the hero.</p><div class="metric">360°</div><div class="micro">Interactive perspective</div><div class="orbit"></div></article>
-    <article class="panel"><div class="eyebrow">02 / Presence</div><h3>Made to feel rare.</h3><p>Dark OLED-inspired surfaces, restrained green and champagne-gold accents create a premium environment.</p><div class="metric">12</div><div class="micro">Featured references</div></article>
+    <article class="panel"><div class="eyebrow">02 / Presence</div><h3>Made to feel rare.</h3><p>Dark OLED-inspired surfaces, restrained red and champagne-gold accents create a premium environment.</p><div class="metric">12</div><div class="micro">Featured references</div></article>
   </div>
   <div class="process">
     <article class="panel"><div class="num">A / 01</div><h4>Choose</h4><p>Browse the collection with tactile glass cards and quick details.</p></article>
