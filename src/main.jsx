@@ -59,7 +59,7 @@ return <div ref={root} className="site"><ShaderCanvas/><div className="grain"/>
 <section id="experience" className="section"><div className="experience-card"><div className="experience-copy"><p className="eyebrow">{t.experienceKicker}</p><h2>{t.experienceTitle}</h2><p>{t.experienceText}</p></div><div className="experience-orbit"><div/><div/><span>01</span></div></div><div className="stats">{[t.stat1,t.stat2,t.stat3].map((x,i)=><div key={x}><span>0{i+1}</span><strong>{x}</strong></div>)}</div></section>
 <section id="craft" className="section craft"><div className="craft-image"><img src={images.gold} alt="Rolex gold watch"/></div><div className="craft-copy"><p className="eyebrow">{t.craftKicker}</p><h2>{t.craftTitle}</h2><p>{t.craftText}</p><div className="rule"/><span>STEEL · GOLD · CERAMIC · SAPPHIRE</span></div></section>
 <section id="visit" className="section visit"><div><p className="eyebrow">{t.visitKicker}</p><h2>{t.visitTitle}</h2><p>{t.visitText}</p></div><a className="gold-button" href="tel:0966186436">{t.call}<span>↗</span></a></section>
-</main><footer><span>© 2026 ROLEX EXPERIENCE</span><span>HOMS · AL-DABLAN STREET · <a href="https://instagram.com/7mud_963" target="_blank" rel="noreferrer">@7mud_963</a></span></footer>
+</main><footer><span>© 2026 ROLEX EXPERIENCE · <a href="/credits.html">IMAGE CREDITS</a></span><span>HOMS · AL-DABLAN STREET · <a href="https://instagram.com/7mud_963" target="_blank" rel="noreferrer">@7mud_963</a></span></footer>
 <AnimatePresence>{active&&<Modal p={active} t={t} onClose={()=>setActive(null)}/>}</AnimatePresence></div>
 }
 
