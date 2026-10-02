@@ -7,6 +7,12 @@ import * as THREE from 'three'
 import './styles.css'
 
 const images={
+datejust:'https://commons.wikimedia.org/wiki/Special:FilePath/Rolex%20Datejust%2016013.jpg',
+explorer:'https://commons.wikimedia.org/wiki/Special:FilePath/152-rolex-explorer-ref-14270-circa-2001-mostra-store-aix-montres-vintage.jpg',
+yacht:'https://commons.wikimedia.org/wiki/Special:FilePath/Rolex%20Yachtmaster%20II%20116680.JPG',
+sky:'https://commons.wikimedia.org/wiki/Special:FilePath/Rolex%20Sky-Dweller%20in%20oro%20bianco.jpg',
+oyster:'https://commons.wikimedia.org/wiki/Special:FilePath/Rolex%20Oyster%20Perpetual%2034%20ref.%20124200%20con%20bracciale%20Oyster%20e%20lunetta%20liscia.jpg',
+sea:'https://commons.wikimedia.org/wiki/Special:FilePath/Rolex%20Sea%20Dweller%2016600.jpg',
 sub:'https://commons.wikimedia.org/wiki/Special:FilePath/Rolex-Submariner.jpg',
 sub2:'https://commons.wikimedia.org/wiki/Special:FilePath/Rolex%20Submariner%20diving%20watch.jpg',
 gmt:'https://commons.wikimedia.org/wiki/Special:FilePath/Rolex%20GMT%20Master%20II%20-%2016710%20%28without%20background%2C%20cropped%20to%20casing%29.jpg',
@@ -18,15 +24,15 @@ daytona2:'https://commons.wikimedia.org/wiki/Special:FilePath/Daytona116509.jpg'
 }
 const products=[
 ['Submariner','116610LN','$10,000',images.sub,'DIVER',['40 mm','Oystersteel','Black dial'],'A purpose-built diving watch with a quiet, unmistakable silhouette.'],
-['Datejust','126334','$11,500',images.sub2,'CLASSIC',['41 mm','Steel & white gold','Blue'],'A balanced everyday icon, polished enough for the evening and restrained enough for every day.'],
+['Datejust','126334','$11,500',images.datejust,'CLASSIC',['41 mm','Steel & white gold','Blue'],'A balanced everyday icon, polished enough for the evening and restrained enough for every day.'],
 ['GMT-Master II','16710','$13,800',images.gmt,'TRAVEL',['40 mm','Oystersteel','24-hour bezel'],'A travel watch with a strong graphic bezel and a character built around two time zones.'],
 ['Daytona','16528','$16,500',images.daytona,'CHRONOGRAPH',['40 mm','Gold','Chronograph'],'A motorsport-born chronograph whose proportions have become part of watchmaking history.'],
 ['Day-Date','1803','$22,000',images.daydate,'STATEMENT',['36 mm','Yellow gold','Champagne'],'Warm precious metal, a day display and a presence that needs very little introduction.'],
-['Explorer','124270','$10,800',images.sub2,'ADVENTURE',['36 mm','Oystersteel','Black'],'Simple, legible and direct — a watch built around the essentials.'],
-['Yacht-Master','126622','$14,200',images.gmt2,'SPORT',['40 mm','Oystersteel','Slate'],'Sporting lines and a technical bezel, softened by the polished character of a luxury watch.'],
-['Sky-Dweller','326934','$18,500',images.gold,'TRAVEL',['42 mm','Steel & white gold','Blue'],'A sophisticated travel companion with a bold dial and a layered information display.'],
-['Oyster Perpetual','124300','$10,200',images.sub,'PURE',['41 mm','Oystersteel','Green'],'The cleanest expression of the Oyster idea: simple, durable and quietly confident.'],
-['Sea-Dweller','126600','$14,900',images.sub2,'DEEP',['43 mm','Oystersteel','Black'],'A substantial diving profile made for serious depth and a serious wrist presence.'],
+['Explorer','124270','$10,800',images.explorer,'ADVENTURE',['36 mm','Oystersteel','Black'],'Simple, legible and direct — a watch built around the essentials.'],
+['Yacht-Master','126622','$14,200',images.yacht,'SPORT',['40 mm','Oystersteel','Slate'],'Sporting lines and a technical bezel, softened by the polished character of a luxury watch.'],
+['Sky-Dweller','326934','$18,500',images.sky,'TRAVEL',['42 mm','Steel & white gold','Blue'],'A sophisticated travel companion with a bold dial and a layered information display.'],
+['Oyster Perpetual','124300','$10,200',images.oyster,'PURE',['41 mm','Oystersteel','Green'],'The cleanest expression of the Oyster idea: simple, durable and quietly confident.'],
+['Sea-Dweller','126600','$14,900',images.sea,'DEEP',['43 mm','Oystersteel','Black'],'A substantial diving profile made for serious depth and a serious wrist presence.'],
 ['GMT-Master II','126715','$36,000',images.gmt2,'PRECIOUS',['40 mm','Everose gold','Brown'],'A warmer, collector-focused interpretation of the travel-watch language.'],
 ['Daytona','116509','$31,000',images.daytona2,'COLLECTOR',['40 mm','White gold','Silver'],'A precious-metal chronograph with a sculptural case and a deeply mechanical personality.']
 ]
